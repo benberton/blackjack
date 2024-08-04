@@ -5,4 +5,9 @@ class Card {
         this.name = name;
         this.value = value;
     }
+
+    printCard()
+    {
+        console.log(this.suit + this.name)
+    }
 }

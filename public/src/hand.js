@@ -1,25 +1,31 @@
 // const Card = require('./card')
 class Hand {
 
-    constructor(cards) {
-        this.cards = cards;
+    constructor() {
+        this.cards = [];
     }
 
     calculateTotal()
     {
         let total = 0;
-        for (card in this.cards)
+        for (let card of this.cards)
             total += card.value;
         return total
     }
 
-    set addCard(card)
+    addCard(card)
     {
         this.cards.push(card);
     }
 
-    get getTotal()
+    getTotal()
     {
         return this.calculateTotal();
+    }
+
+    printHand()
+    {
+        for(let card of this.cards)
+            card.printCard()
     }
 }
