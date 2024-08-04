@@ -1,8 +1,8 @@
 class Card {
-    constructor(fullName, id, value)
+    constructor(suit, name, value)
     {
-        this.fullName = fullName;
-        this.id = id;
+        this.suit = suit;
+        this.name = name;
         this.value = value;
     }
 }
