@@ -19,10 +19,17 @@ class Game {
                 this.player.hands[j].addCard(this.deck.getCard())
         }
      
-        console.log("Dealer")
+        console.log("Dealer - ")
         this.dealer.printHands()
-        console.log("Player")
-        this.player.printHands()
+        console.log("Player - ")
+        for (let hand of this.player.hands)
+        {
+            hand.printHand()
+            if (hand.calculateTotal() < 21)
+                hand.addCard(this.deck.getCard())
+        }
 
+        console.log("-----------------")
+        this.player.printHands()
     }
 }
