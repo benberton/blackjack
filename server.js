@@ -1,9 +1,17 @@
 const express = require('express'); // Import Express
 const app = express(); // Create an Express application
+const path = require('path');
+
+
+app.use(express.json());
+
+// Serve static files from the 'public' folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Define a route for the root URL
 app.get('/', (req, res) => {
-    res.send('Hello, World!'); // Send a response
+    // Serve the HTML file
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Define the port number
