@@ -10,7 +10,8 @@ class Game {
     round()
     {
         this.dealer.setHands(1) // dealer only has one hand
-        this.player.setHands(1)
+        // TODO add logic that allows player to add more hands
+        this.player.setHands(2)
         for (let i = 0; i < 2; ++i) // each hand gets 2 cards
         {
             this.dealer.hands[0].addCard(this.deck.getCard())
@@ -20,10 +21,8 @@ class Game {
      
         console.log("Dealer")
         this.dealer.printHands()
-        console.log(this.dealer.hands[0].getTotal())
         console.log("Player")
         this.player.printHands()
-        console.log(this.player.hands[0].getTotal())
 
     }
 }

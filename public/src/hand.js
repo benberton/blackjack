@@ -27,5 +27,6 @@ class Hand {
     {
         for(let card of this.cards)
             card.printCard()
+        console.log("Total: " + this.calculateTotal())
     }
 }
