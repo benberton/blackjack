@@ -18,7 +18,8 @@ class Game {
             for (let j = 0; j < this.player.hands.length; ++j)
                 this.player.hands[j].addCard(this.deck.getCard())
         }
-     
+        if (this.dealer.hands[0].calculateTotal() == 21)
+            console.log("Dealer has 21")
         console.log("Dealer - ")
         this.dealer.printHands()
         console.log("Player - ")
